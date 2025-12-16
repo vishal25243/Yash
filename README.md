@@ -105,3 +105,158 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holla Homes Inspired - Services</title>
+    <style>
+        /* Reset and Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: #f4f4f4; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header & Nav */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #007bff; }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links li { display: inline; }
+        .nav-links a { padding: 0.5rem 1rem; transition: all 0.3s; border-radius: 5px; }
+        .nav-links a:hover, .nav-links a.active { background: #007bff; color: white; }
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* Services */
+        section { padding: 5rem 0; }
+        h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #007bff; }
+        h3 { margin-bottom: 1rem; font-size: 1.8rem; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .service:hover { transform: translateY(-10px); }
+        .service h3 { color: #007bff; }
+        .service ul { list-style: none; text-align: left; margin-top: 1rem; }
+        .service li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
+        .service li::before { content: '✓'; color: #28a745; position: absolute; left: 0; }
+        .btn { padding: 0.8rem 1.8rem; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s; font-size: 1rem; }
+        .btn:hover { background: #0056b3; transform: scale(1.05); }
+
+        /* Back Button */
+        .back-btn { display: block; margin: 2rem auto; text-align: center; }
+
+        /* Footer */
+        footer { background: #333; color: white; text-align: center; padding: 2rem; }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        footer a { color: #ccc; transition: color 0.3s; }
+        footer a:hover { color: white; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav { padding: 1rem; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 1rem 0; }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .services { grid-template-columns: 1fr; }
+            .footer-links { flex-direction: column; gap: 1rem; }
+            section { padding: 3rem 0; }
+            h2 { font-size: 2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .service { padding: 1rem; }
+            .btn { padding: 0.6rem 1.4rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Holla Homes</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="index.html#properties">Properties</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Interior Design</h3>
+                <p>Transform spaces with custom designs.</p>
+                <ul>
+                    <li>Modern Style</li>
+                    <li>Traditional Style</li>
+                    <li>Minimalist Style</li>
+                    <li>Eco-Friendly Options</li>
+                </ul>
+                <button class="btn" onclick="alert('Interior Design selected!')">Get Quote</button>
+            </div>
+            <div class="service">
+                <h3>Architecture Planning</h3>
+                <p>Full planning from concept to completion.</p>
+                <ul>
+                    <li>Residential Buildings</li>
+                    <li>Commercial Spaces</li>
+                    <li>Renovations</li>
+                    <li>Permits & Blueprints</li>
+                </ul>
+                <button class="btn" onclick="alert('Architecture Planning selected!')">Get Quote</button>
+            </div>
+            <div class="service">
+                <h3>Property Management</h3>
+                <p>Manage and maintain your properties.</p>
+                <ul>
+                    <li>Rental Services</li>
+                    <li>Maintenance</li>
+                    <li>Legal Support</li>
+                    <li>Investment Advice</li>
+                </ul>
+                <button class="btn" onclick="alert('Property Management selected!')">Get Quote</button>
+            </div>
+            <div class="service">
+                <h3>Consultation</h3>
+                <p>Free expert advice for your projects.</p>
+                <ul>
+                    <li>Virtual Consult</li>
+                    <li>In-Person Meet</li>
+                    <li>Project Assessment</li>
+                    <li>Budget Planning</li>
+                </ul>
+                <button class="btn" onclick="alert('Consultation selected!')">Book Now</button>
+            </div>
+        </div>
+        <a href="index.html" class="btn back-btn">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#properties">Properties</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <p>&copy; 2023 Holla Homes Inspired. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
